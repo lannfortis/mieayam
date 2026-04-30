@@ -385,6 +385,14 @@ img {
     margin: 0 auto;
 }
 
+.hero-main-img.illustration {
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 500px;
+    width: 95%;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+}
+
 .floating-element {
     position: absolute;
     font-size: 2.5rem;

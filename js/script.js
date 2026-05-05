@@ -1,7 +1,21 @@
+// Preloader Logic
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        // Tahan loading minimal 1.5 detik agar animasinya lebih terlihat
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }, 3500);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -15,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links a');
 
-    if(hamburger) {
+    if (hamburger) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             // Ubah icon hamburger ke close (X)
@@ -47,12 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            
-            if(targetId === '#') return;
-            
+
+            if (targetId === '#') return;
+
             const targetElement = document.querySelector(targetId);
-            
-            if(targetElement) {
+
+            if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -62,10 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Update Active Link di Navbar saat scroll (Scroll Spy)
     const sections = document.querySelectorAll('section, header');
-    
+
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
@@ -82,6 +96,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Animasi Card Hover untuk interaksi (opsional, jika butuh tambahan di JS)
-    // Sebagian besar animasi sudah dihandle CSS (transform, box-shadow)
+    // 5. Social Media Modal Logic
+    const btnIkutiKami = document.getElementById('btnIkutiKami');
+    const socialModal = document.getElementById('socialModal');
+    const closeSocialModal = document.querySelector('.close-social-modal');
+
+    if (btnIkutiKami && socialModal && closeSocialModal) {
+        // Buka modal
+        btnIkutiKami.addEventListener('click', () => {
+            socialModal.classList.add('active');
+        });
+
+        // Tutup modal dengan klik tombol X
+        closeSocialModal.addEventListener('click', () => {
+            socialModal.classList.remove('active');
+        });
+
+        // Tutup modal jika klik di luar area konten
+        window.addEventListener('click', (e) => {
+            if (e.target === socialModal) {
+                socialModal.classList.remove('active');
+            }
+        });
+    }
 });

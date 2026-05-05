@@ -17,9 +17,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="image/icon1.png" type="image/png">
 </head>
 
 <body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-spinner"></div>
+            <img src="image/icon1.png" alt="Loading..." class="loader-icon">
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -53,11 +64,9 @@
                 <div class="hero-buttons">
                     <a href="#menu" class="btn btn-primary btn-lg">Lihat Menu <i
                             class="fa-solid fa-arrow-right"></i></a>
-                    <div class="hero-social">
-                        <span>Ikuti kami:</span>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
+                    <button id="btnIkutiKami" class="btn btn-outline btn-lg" style="gap: 10px;">
+                        Ikuti Kami <i class="fa-solid fa-share-nodes"></i>
+                    </button>
                 </div>
             </div>
             <div class="hero-image-wrapper">
@@ -262,6 +271,18 @@
             <p>&copy; 2026 Mie Gadjah Mungkur. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
+
+    <!-- Social Media Modal -->
+    <div id="socialModal" class="social-modal-overlay">
+        <div class="social-modal-content text-center">
+            <span class="close-social-modal">&times;</span>
+            <h3 style="margin-bottom: 25px; font-family: var(--font-heading); font-size: 1.5rem;">Temukan Kami di Sosial Media</h3>
+            <div class="social-modal-links">
+                <a href="#" class="social-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#" class="social-btn tiktok"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/6283815830898" target="_blank" class="floating-wa" aria-label="Chat WhatsApp">

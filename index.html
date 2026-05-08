@@ -37,15 +37,23 @@
         <div class="container nav-container">
             <a href="#" class="logo">
                 <img src="image/gambar.png" alt="Logo Mie Ayam"
-                    style="height: 100px; transform: scale(1.8); transform-origin: left center;">
+                    style="height: 65px; transform: scale(1.3); transform-origin: left center;">
             </a>
             <ul class="nav-links">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#tentang">Tentang Kami</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#lokasi">Lokasi</a></li>
+                <li><a href="#beranda" data-i18n="nav-beranda">Beranda</a></li>
+                <li><a href="#tentang" data-i18n="nav-tentang">Tentang Kami</a></li>
+                <li><a href="#menu" data-i18n="nav-menu">Menu</a></li>
+                <li><a href="#lokasi" data-i18n="nav-lokasi">Lokasi</a></li>
             </ul>
-            <a href="https://wa.me/6283815830898" target="_blank" class="btn btn-primary nav-btn">Pesan Sekarang</a>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="id">ID</button>
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="https://wa.me/6283815830898" target="_blank" class="btn btn-primary nav-btn"
+                    data-i18n="nav-pesan">Pesan Sekarang</a>
+            </div>
             <div class="hamburger">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -58,14 +66,16 @@
             <div class="hero-content">
                 <div class="badge-wrapper">
                 </div>
-                <h1 class="hero-title">Mie Ayam<br><span class="text-primary">Legendaris</span>,<br>Rasa Otentik.</h1>
-                <p class="hero-desc">Bukan sekadar mangkuk biasa. Ini adalah simfoni rasa dari resep rahasia keluarga
+                <h1 class="hero-title" data-i18n="hero-title">Mie Ayam<br><span
+                        class="text-primary">Legendaris</span>,<br>Rasa Otentik.</h1>
+                <p class="hero-desc" data-i18n="hero-desc">Bukan sekadar mangkuk biasa. Ini adalah simfoni rasa dari
+                    resep rahasia keluarga
                     yang tak lekang oleh waktu. Buktikan sendiri kenyalnya!</p>
                 <div class="hero-buttons">
-                    <a href="#menu" class="btn btn-primary btn-lg">Lihat Menu <i
+                    <a href="#menu" class="btn btn-primary btn-lg"><span data-i18n="hero-btn-menu">Lihat Menu</span> <i
                             class="fa-solid fa-arrow-right"></i></a>
                     <button id="btnIkutiKami" class="btn btn-outline btn-lg" style="gap: 10px;">
-                        Ikuti Kami <i class="fa-solid fa-share-nodes"></i>
+                        <span data-i18n="hero-btn-ikuti">Ikuti Kami</span> <i class="fa-solid fa-share-nodes"></i>
                     </button>
                 </div>
             </div>
@@ -87,7 +97,7 @@
                             <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
                         </defs>
                         <text font-size="11" font-weight="bold" fill="var(--text-dark)" letter-spacing="2">
-                            <textPath href="#circle">
+                            <textPath href="#circle" data-i18n="hero-badge">
                                 100% HALAL TANPA PENGAWET
                             </textPath>
                         </text>
@@ -106,34 +116,34 @@
                 <img src="image/cerita.png" alt="Pembuatan Mie Ayam">
                 <div class="experience-badge">
                     <span class="year">1992</span>
-                    <span class="text">Resep<br>Warisan</span>
+                    <span class="text" data-i18n="about-badge-text">Resep<br>Warisan</span>
                 </div>
             </div>
             <div class="about-content">
-                <h2 class="section-title">Lebih Dari Sekadar Mie Ayam</h2>
-                <p>Berawal dari resep sederhana di dapur kecil keluarga kami pada tahun 1992, kini Mie Ayam Gadjah
-                    Mungkur
-                    telah menjadi favorit warga sekitar. Rahasianya? Kami selalu menjaga kualitas.</p>
+                <h2 class="section-title" data-i18n="about-title">Lebih Dari Sekadar Mie Ayam</h2>
+                <p data-i18n="about-desc">Berawal dari resep sederhana di dapur kecil keluarga kami pada tahun 1992,
+                    kini Mie Ayam Gadjah Mungkur telah menjadi favorit warga sekitar. Rahasianya? Kami selalu menjaga
+                    kualitas.</p>
                 <ul class="features-list">
                     <li>
                         <div class="feature-icon"><i class="fa-solid fa-wheat-awn"></i></div>
                         <div>
-                            <h3>Mie Buatan Sendiri</h3>
-                            <p>Dibuat segar setiap hari tanpa bahan pengawet.</p>
+                            <h3 data-i18n="about-feat1-title">Mie Buatan Sendiri</h3>
+                            <p data-i18n="about-feat1-desc">Dibuat segar setiap hari tanpa bahan pengawet.</p>
                         </div>
                     </li>
                     <li>
                         <div class="feature-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
                         <div>
-                            <h3>Ayam Pilihan</h3>
-                            <p>Potongan ayam segar dengan bumbu rempah melimpah.</p>
+                            <h3 data-i18n="about-feat2-title">Ayam Pilihan</h3>
+                            <p data-i18n="about-feat2-desc">Potongan ayam segar dengan bumbu rempah melimpah.</p>
                         </div>
                     </li>
                     <li>
                         <div class="feature-icon"><i class="fa-solid fa-pepper-hot"></i></div>
                         <div>
-                            <h3>Sambal Khas</h3>
-                            <p>Rasa pedas nendang yang pas di lidah penikmat pedas.</p>
+                            <h3 data-i18n="about-feat3-title">Sambal Khas</h3>
+                            <p data-i18n="about-feat3-desc">Rasa pedas nendang yang pas di lidah penikmat pedas.</p>
                         </div>
                     </li>
                 </ul>
@@ -145,8 +155,8 @@
     <section class="menu" id="menu">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">Kreasi Dapur Kami</span>
-                <h2 class="section-title">Eksplorasi Rasa</h2>
+                <span class="subtitle" data-i18n="menu-subtitle">Kreasi Dapur Kami</span>
+                <h2 class="section-title" data-i18n="menu-title">Eksplorasi Rasa</h2>
             </div>
 
             <div class="menu-zigzag">
@@ -157,13 +167,15 @@
                         <div class="price-tag">Rp 8.000</div>
                     </div>
                     <div class="zigzag-content">
-                        <span class="menu-badge-new">🌟 Signature</span>
-                        <h3>Mie Ayam Spesial</h3>
-                        <p>Kombinasi sempurna antara mie kenyal buatan tangan, topping ayam kecap melimpah,
+                        <span class="menu-badge-new" data-i18n="menu-item1-badge">🌟 Signature</span>
+                        <h3 data-i18n="menu-item1-title">Mie Ayam Spesial</h3>
+                        <p data-i18n="menu-item1-desc">Kombinasi sempurna antara mie kenyal buatan tangan, topping ayam
+                            kecap melimpah,
                             Menu wajib coba!</p>
                         <a href="https://wa.me/6283815830898?text=Halo%20Mie%20Ayam%20Gadjah%20Mungkur,%20saya%20ingin%20memesan%20Mie%20Ayam%20Spesial"
-                            target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Pesan
-                            Sekarang</a>
+                            target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> <span
+                                data-i18n="menu-btn-order">Pesan
+                                Sekarang</span></a>
                     </div>
                 </div>
 
@@ -174,12 +186,14 @@
                         <div class="price-tag">Rp 8.000</div>
                     </div>
                     <div class="zigzag-content">
-                        <h3>Mie Ayam Spesial Kering</h3>
-                        <p>Sensasi menikmati mie ayam tanpa kuah dengan bumbu yang lebih meresap, disajikan bersama
+                        <h3 data-i18n="menu-item2-title">Mie Ayam Spesial Kering</h3>
+                        <p data-i18n="menu-item2-desc">Sensasi menikmati mie ayam tanpa kuah dengan bumbu yang lebih
+                            meresap, disajikan bersama
                             topping ayam kecap manis gurih dan taburan daun bawang segar.</p>
                         <a href="https://wa.me/6283815830898?text=Halo%20Mie%20Ayam%20Gadjah%20Mungkur,%20saya%20ingin%20memesan%20Mie%20Ayam%20Spesial%20Kering"
-                            target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Pesan
-                            Sekarang</a>
+                            target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> <span
+                                data-i18n="menu-btn-order">Pesan
+                                Sekarang</span></a>
                     </div>
                 </div>
 
@@ -190,12 +204,14 @@
                         <div class="price-tag">Rp 12.000</div>
                     </div>
                     <div class="zigzag-content">
-                        <h3>Mie Ayam Spesial Ceker</h3>
-                        <p>Bagi penggemar ceker, nikmati lembutnya ceker ayam bumbu kecap rahasia kami yang direbus
+                        <h3 data-i18n="menu-item3-title">Mie Ayam Spesial Ceker</h3>
+                        <p data-i18n="menu-item3-desc">Bagi penggemar ceker, nikmati lembutnya ceker ayam bumbu kecap
+                            rahasia kami yang direbus
                             perlahan hingga lumer di mulut, berpadu sempurna dengan mie kenyal andalan kami.</p>
                         <a href="https://wa.me/6283815830898?text=Halo%20Mie%20Ayam%20Gadjah%20Mungkur,%20saya%20ingin%20memesan%20Mie%20Ayam%20Spesial%20Ceker"
-                            target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Pesan
-                            Sekarang</a>
+                            target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> <span
+                                data-i18n="menu-btn-order">Pesan
+                                Sekarang</span></a>
                     </div>
                 </div>
             </div>
@@ -206,26 +222,35 @@
     <section class="quality-section" id="keunggulan">
         <div class="container">
             <div class="section-header text-center" style="margin-bottom: 50px;">
-                <span class="subtitle">Keunggulan Kami</span>
-                <h2 class="section-title">Kualitas Bintang Lima</h2>
-                <p class="section-desc" style="font-size: 1.05rem; max-width: 600px; margin: 15px auto 0;">Bukan hanya soal rasa, kami sangat peduli pada kualitas bahan yang disajikan untuk pelanggan setia kami. Datang dan buktikan sendiri!</p>
+                <span class="subtitle" data-i18n="quality-subtitle">Keunggulan Kami</span>
+                <h2 class="section-title" data-i18n="quality-title">Kualitas Bintang Lima</h2>
+                <p class="section-desc" data-i18n="quality-desc"
+                    style="font-size: 1.05rem; max-width: 600px; margin: 15px auto 0;">Bukan hanya
+                    soal rasa, kami sangat peduli pada kualitas bahan yang disajikan untuk pelanggan setia kami. Datang
+                    dan buktikan sendiri!</p>
             </div>
-            
+
             <div class="quality-grid">
                 <div class="q-card">
                     <div class="q-icon"><i class="fa-solid fa-award"></i></div>
-                    <h4>Bahan Premium Berkualitas</h4>
-                    <p>Menggunakan 100% daging ayam segar pilihan, bumbu rempah kualitas terbaik, dan kecap nomor satu.</p>
+                    <h4 data-i18n="quality-item1-title">Bahan Premium Berkualitas</h4>
+                    <p data-i18n="quality-item1-desc">Menggunakan 100% daging ayam segar pilihan, bumbu rempah kualitas
+                        terbaik, dan kecap nomor satu.
+                    </p>
                 </div>
                 <div class="q-card">
                     <div class="q-icon"><i class="fa-solid fa-certificate"></i></div>
-                    <h4>Higienis & Terjamin Halal</h4>
-                    <p>Proses memasak dilakukan secara bersih dengan standar tinggi dan bahan-bahan dijamin 100% halal.</p>
+                    <h4 data-i18n="quality-item2-title">Higienis & Terjamin Halal</h4>
+                    <p data-i18n="quality-item2-desc">Proses memasak dilakukan secara bersih dengan standar tinggi dan
+                        bahan-bahan dijamin 100% halal.
+                    </p>
                 </div>
                 <div class="q-card">
                     <div class="q-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <h4>Tanpa Pengawet Buatan</h4>
-                    <p>Aman dikonsumsi setiap hari dari anak-anak hingga dewasa. Semua diracik segar setiap pagi hari.</p>
+                    <h4 data-i18n="quality-item3-title">Tanpa Pengawet Buatan</h4>
+                    <p data-i18n="quality-item3-desc">Aman dikonsumsi setiap hari dari anak-anak hingga dewasa. Semua
+                        diracik segar setiap pagi hari.
+                    </p>
                 </div>
             </div>
         </div>
@@ -235,42 +260,46 @@
     <section class="location-map" id="lokasi">
         <div class="container">
             <div class="section-header text-center" style="margin-bottom: 50px;">
-                <span class="subtitle">Kunjungi Kami</span>
-                <h2 class="section-title">Temukan Lokasi Kami</h2>
+                <span class="subtitle" data-i18n="loc-subtitle">Kunjungi Kami</span>
+                <h2 class="section-title" data-i18n="loc-title">Temukan Lokasi Kami</h2>
             </div>
-            
+
             <div class="location-grid-new">
                 <div class="location-info-card">
-                    <h3>Mie Ayam Gadjah Mungkur</h3>
-                    <p class="loc-desc">Warisan rasa keluarga sejak 1992. Nikmati sajian mie ayam otentik langsung di tempat kami yang nyaman.</p>
-                    
+                    <h3 data-i18n="loc-name">Mie Ayam Gadjah Mungkur</h3>
+                    <p class="loc-desc" data-i18n="loc-desc">Warisan rasa keluarga sejak 1992. Nikmati sajian mie ayam
+                        otentik langsung di
+                        tempat kami yang nyaman.</p>
+
                     <ul class="loc-details">
                         <li>
                             <div class="loc-icon"><i class="fa-solid fa-location-dot"></i></div>
                             <div class="loc-text">
-                                <strong>Alamat Lengkap</strong>
+                                <strong data-i18n="loc-addr-title">Alamat Lengkap</strong>
                                 <span>Jl. Situbondo No. 81, Pasar Wonosari, Bondowoso</span>
                             </div>
                         </li>
                         <li>
                             <div class="loc-icon"><i class="fa-regular fa-clock"></i></div>
                             <div class="loc-text">
-                                <strong>Jam Operasional</strong>
-                                <span>Setiap Hari: 14:00 - 23:00 WIB</span>
+                                <strong data-i18n="loc-hours-title">Jam Operasional</strong>
+                                <span data-i18n="loc-hours-desc">Setiap Hari: 14:00 - 23:00 WIB</span>
                             </div>
                         </li>
                         <li>
                             <div class="loc-icon"><i class="fa-solid fa-phone"></i></div>
                             <div class="loc-text">
-                                <strong>Telepon / WhatsApp</strong>
+                                <strong data-i18n="loc-phone-title">Telepon / WhatsApp</strong>
                                 <span>+62 838-1583-0898</span>
                             </div>
                         </li>
                     </ul>
-                    
-                    <a href="https://maps.google.com/?q=-7.885750730368472,113.8945406761022" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Petunjuk Arah <i class="fa-solid fa-location-arrow"></i></a>
+
+                    <a href="https://maps.google.com/?q=-7.885750730368472,113.8945406761022" target="_blank"
+                        class="btn btn-primary" style="width: 100%; margin-top: 10px;"><span
+                            data-i18n="loc-btn-dir">Petunjuk Arah</span> <i class="fa-solid fa-location-arrow"></i></a>
                 </div>
-                
+
                 <div class="map-wrapper">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.00556629124327!2d113.8945406761022!3d-7.885750730368472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1777468616399!5m2!1sen!2sid"
@@ -289,7 +318,8 @@
                     <img src="image/gambar.png" alt="Logo Mie Ayam"
                         style="height: 100px; transform: scale(1.8); transform-origin: left center;">
                 </a>
-                <p>Warisan rasa keluarga yang telah menemani masyarakat sejak 1992. Rasa bintang lima, harga kaki lima.
+                <p data-i18n="footer-desc">Warisan rasa keluarga yang telah menemani masyarakat sejak 1992. Rasa bintang
+                    lima, harga kaki lima.
                 </p>
                 <div class="social-links">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -298,12 +328,12 @@
             </div>
 
             <div class="footer-col">
-                <h3>Jam Operasional</h3>
+                <h3 data-i18n="footer-hours-title">Jam Operasional</h3>
                 <div class="operational-hours">
                     <ul class="info-list">
                         <li>
                             <span><i class="fa-regular fa-clock" style="color: var(--primary); margin-right: 8px;"></i>
-                                Setiap Hari</span>
+                                <span data-i18n="footer-hours-day">Setiap Hari</span></span>
                             <span style="font-weight: 600; color: var(--bg-white);">14:00 - 23:00 WIB</span>
                         </li>
                     </ul>
@@ -313,15 +343,16 @@
                                 <span class="ping-circle"></span>
                                 <span class="ping-dot"></span>
                             </span>
-                            Kami Siap Melayani
+                            <span data-i18n="footer-status-title">Kami Siap Melayani</span>
                         </h4>
-                        <p>Nikmati mie ayam legendaris terbaik. Jangan sampai kehabisan, pesan sekarang juga!</p>
+                        <p data-i18n="footer-status-desc">Nikmati mie ayam legendaris terbaik. Jangan sampai kehabisan,
+                            pesan sekarang juga!</p>
                     </div>
                 </div>
             </div>
 
             <div class="footer-col">
-                <h3>Hubungi Kami</h3>
+                <h3 data-i18n="footer-contact-title">Hubungi Kami</h3>
                 <ul class="contact-info">
                     <li><i class="fa-solid fa-location-dot"></i> Jl. Situbondo No. 81, Pasar Wonosari, Bondowoso</li>
                     <li><i class="fa-solid fa-phone"></i> +62 838-1583-0898</li>
@@ -331,7 +362,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Mie Gadjah Mungkur. Hak Cipta Dilindungi.</p>
+            <p data-i18n="footer-copyright">&copy; 2026 Mie Gadjah Mungkur. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
@@ -339,7 +370,8 @@
     <div id="socialModal" class="social-modal-overlay">
         <div class="social-modal-content text-center">
             <span class="close-social-modal">&times;</span>
-            <h3 style="margin-bottom: 25px; font-family: var(--font-heading); font-size: 1.5rem;">Temukan Kami di Sosial
+            <h3 data-i18n="modal-title"
+                style="margin-bottom: 25px; font-family: var(--font-heading); font-size: 1.5rem;">Temukan Kami di Sosial
                 Media</h3>
             <div class="social-modal-links">
                 <a href="#" class="social-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
@@ -353,6 +385,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
 </body>
 

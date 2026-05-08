@@ -119,4 +119,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 6. Language Switcher Logic
+    const langBtns = document.querySelectorAll('.lang-btn');
+    
+    function setLanguage(lang) {
+        langBtns.forEach(btn => {
+            if (btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        if (typeof translations !== 'undefined') {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[key] && translations[key][lang]) {
+                    el.innerHTML = translations[key][lang];
+                }
+            });
+        }
+        
+        localStorage.setItem('selectedLang', lang);
+        document.documentElement.lang = lang;
+    }
+
+    const savedLang = localStorage.getItem('selectedLang') || 'id';
+    setLanguage(savedLang);
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
 });

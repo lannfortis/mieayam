@@ -224,7 +224,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 12px 0;
     z-index: 1000;
     transition: var(--transition);
     background-color: transparent;
@@ -233,7 +233,7 @@ img {
 .navbar.scrolled {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 15px 0;
+    padding: 8px 0;
     box-shadow: var(--shadow-sm);
 }
 
@@ -288,6 +288,36 @@ img {
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary);
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.lang-btn:hover {
+    color: var(--primary);
+}
+
+.lang-btn.active {
+    color: var(--bg-white);
+    background: var(--primary);
 }
 
 .hamburger {
@@ -526,7 +556,14 @@ img {
    ========================================= */
 .about {
     padding: 100px 0;
-    background-color: var(--bg-white);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--bg-white);
+}
+
+.about .section-title,
+.about .features-list h3,
+.about .features-list p {
+    color: var(--bg-white);
 }
 
 .about-container {
@@ -547,7 +584,7 @@ img {
     left: 10%;
     width: 80%;
     height: 90%;
-    background-color: var(--primary-light);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     z-index: 0;
     transform: rotate(-5deg);
@@ -599,7 +636,7 @@ img {
 }
 
 .about-content p {
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 30px;
 }
 
@@ -618,8 +655,9 @@ img {
 .feature-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--primary-light);
-    color: var(--primary);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--bg-white);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     display: flex;
     align-items: center;
